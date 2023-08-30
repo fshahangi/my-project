@@ -1,0 +1,26 @@
+import React, { useContext } from "react"
+import { ProductsContext } from "../context/MyContext";
+import { useDispatch, useSelector } from "react-redux";
+
+const Header = () => {
+  const products = useSelector(state => state.allproducts.listproduct)
+  console.log(products)
+  const dispatch = useDispatch()
+  // Context API
+    //const [products,setProducts]= useContext(ProductsContext);
+  return (
+    <div>
+      {// Context API
+      /* <h1>Products Count: {products.length}</h1> */}
+
+      {// useReducer
+
+       <h1>Products Count:{products.length}</h1>
+
+      }
+    </div>
+  );
+};
+
+export default Header;
+
